@@ -1,6 +1,6 @@
 # USColorPicker
 
-## .h
+## ViewController.h
 
 ```
 @interface ViewController : UIViewController <USColorPickerControllerDelegate> {
@@ -15,7 +15,7 @@
 ```
 
 
-## .m
+## ViewController.m
 
 ```
 @implementation ViewController
@@ -30,47 +30,46 @@
 	[usColorPickerCtrl view]; // preload
 
 	// Button
-    colorPickerPresentationBtn = [[UIButton alloc] initWithFrame:CGRectMake(m, 782, w - m*2, 30)]; //CGRectMake(30, 782, 260, 30)
+    colorPickerPresentationBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 260, 30)];
     [colorPickerPresentationBtn setTitle:@"" forState:UIControlStateNormal];
     [colorPickerPresentationBtn setTintColor:usColorPickerCtrl.colorPicker.lastColor];
     [colorPickerPresentationBtn setBackgroundColor:usColorPickerCtrl.colorPicker.lastColor];
-    [colorPickerPresentationBtn addTarget:self action:@selector(listen2ColorBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [paramsView addSubview:colorPickerPresentationBtn];
+    [colorPickerPresentationBtn addTarget:self action:@selector(listen2ColorPickerPresentationBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:colorPickerPresentationBtn];
 }
 
-- (void)listen2ColorBtn:(id)sender
+- (void)listen2ColorPickerPresentationBtn:(id)sender
 {
     [self presentViewController:chooseColorViewCtrl animated:YES completion:^{
         NSLog(@"Choose color...");
     }];
-    [self unselectPresets];
 }
 
 #pragma mark - USColorPickerControllerDelegate methods
 
 - (void)dismissColorPicker
 {
+    // user cancelled
     [self dismissViewControllerAnimated:YES completion:^{
-        NSLog(@"Just closing color picker");
+        // change back to what we had before
         usColorPickerCtrl.colorPicker.lastPosition = previousColorPickerPosition;
         usColorPickerCtrl.colorPicker.lastColor = previousColorPickerColor;
         [usColorPickerCtrl.colorPicker applyPosition:previousColorPickerPosition andColor:previousColorPickerColor];
-        [self resizeSettingsBackToNormal];
     }];
 }
 
 - (void)dismissColorPickerAndUseSelectedColor
 {
-    [self.delegate setBkgdColor:usColorPickerCtrl.colorPicker.lastColor]; // apply
+    // saving new values
     previousColorPickerPosition = usColorPickerCtrl.colorPicker.lastPosition;
     previousColorPickerColor = usColorPickerCtrl.colorPicker.lastColor;
     [usColorPickerCtrl.colorPicker applyPositionAndColor];
-    [self unselectPresets]; // this param has changed so we should unselect potentially selected presets
+
+    // applying chosen color to the button
     [colorPickerPresentationBtn setTintColor:usColorPickerCtrl.colorPicker.lastColor]; // set button's color
     [colorPickerPresentationBtn setBackgroundColor:usColorPickerCtrl.colorPicker.lastColor];
     [self dismissViewControllerAnimated:YES completion:^{ // close modal view
         NSLog(@"Using selected color picker color");
-        [self resizeSettingsBackToNormal];
     }];
 }
 

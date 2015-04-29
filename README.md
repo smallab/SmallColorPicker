@@ -1,7 +1,8 @@
 # USColorPicker
 
-*** .h
+## .h
 
+```
 @interface ViewController : UIViewController <USColorPickerControllerDelegate> {
     USColorPickerController     *usColorPickerCtrl;
     UIColor                     *previousColorPickerColor;
@@ -11,10 +12,12 @@
 }
 
 @end
+```
 
 
-*** .m
+## .m
 
+```
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -72,3 +75,4 @@
 }
 
 @end
+```

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 User Studio. All rights reserved.
 //
 
-#import "ColorPickerView.h"
+#import "USColorPickerView.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import <QuartzCore/CoreAnimation.h>
 
@@ -50,7 +50,7 @@
     CGPoint point = [touch locationInView:self];
     if (point.y >= CGImageGetHeight(self.colorPickerPalette.image.CGImage))
         point = CGPointMake(point.x, point.y-1);
-	self.lastColor = [ImageColorPicking getPixelColorAtLocation:point inImage:self.colorPickerPalette.image.CGImage];
+	self.lastColor = [USImageColorPicking getPixelColorAtLocation:point inImage:self.colorPickerPalette.image.CGImage];
     self.lastPosition = point;
     [self applyPositionAndColor];
 }

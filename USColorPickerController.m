@@ -41,7 +41,7 @@
     self.view.frame = CGRectMake(0, 0, w, h);
 
     // creating the color picker (UIView)
-    self.colorPicker = [[ColorPickerView alloc] initWithFrame:self.view.frame];
+    self.colorPicker = [[USColorPickerView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.colorPicker];
     [self.view bringSubviewToFront:self.colorPicker];
 

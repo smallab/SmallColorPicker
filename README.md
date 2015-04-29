@@ -40,7 +40,7 @@
 
 - (void)listen2ColorPickerPresentationBtn:(id)sender
 {
-    [self presentViewController:chooseColorViewCtrl animated:YES completion:^{
+    [self presentViewController:usColorViewCtrl animated:YES completion:^{
         NSLog(@"Choose color...");
     }];
 }

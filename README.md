@@ -1,6 +1,6 @@
 # USColorPicker
 
-Here under is some sample code for the *View Controller* you wish to launch the *USColorPicker modal view* from.
+Here under is some sample code for the *View Controller* you wish to launch the *USColorPicker modal view* from:
 
 ![alt tag](http://www.smallab.org/content/files/6/file554384294b7e1.png)
 

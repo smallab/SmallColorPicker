@@ -8,6 +8,9 @@ The code & its assets are distributed under the BSD license.
 ## ViewController.h
 
 ```
+#import <UIKit/UIKit.h>
+#import "USColorPickerController.h"
+
 @interface ViewController : UIViewController <USColorPickerControllerDelegate> {
     USColorPickerController     *usColorPickerCtrl;
     UIColor                     *previousColorPickerColor;
@@ -23,6 +26,12 @@ The code & its assets are distributed under the BSD license.
 ## ViewController.m
 
 ```
+#import "ViewController.h"
+
+@interface SettingsViewController ()
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad

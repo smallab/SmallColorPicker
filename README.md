@@ -2,7 +2,7 @@
 
 Here under is some sample code for the *View Controller* you wish to launch the *USColorPicker modal view* from.
 
-![alt tag](http://www.smallab.org/content/files/6/file554382bfeba7c.png)
+![alt tag](http://www.smallab.org/content/files/6/file554384294b7e1.png)
 
 Please note that the USColorPicker classes are provided as used in apps *optimized for the iPhone 5* such as Pixel is Data (http://www.smallab.org/pixel-is-data/). Some adaptation might (will) be necessary. User Studio can be in no way accounted responsible for their malfunction or misuse in your own project.
 The code & its assets are distributed under the BSD license.

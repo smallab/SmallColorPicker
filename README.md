@@ -31,7 +31,7 @@ The code & its assets are distributed under the BSD license *(means it's free, a
 ```objective-c
 #import "ViewController.h"
 
-@interface SettingsViewController ()
+@interface ViewController ()
 
 @end
 

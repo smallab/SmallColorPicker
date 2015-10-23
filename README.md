@@ -57,7 +57,7 @@ The code & its assets are distributed under the BSD license *(means it's free, a
 
 - (void)listen2ColorPickerPresentationBtn:(id)sender
 {
-    [self presentViewController:usColorViewCtrl animated:YES completion:^{
+    [self presentViewController:usColorPickerCtrl animated:YES completion:^{
         NSLog(@"Choose color...");
     }];
 }

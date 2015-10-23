@@ -73,4 +73,11 @@
     self.backgroundColor = color;
 }
 
+#pragma mark - Get position for color
+
+- (void)findPositionForColor:(NSString *)colorhex
+{
+    self.lastPosition = [USImageColorPicking getPositionForColor:(NSString *)colorhex inImage:self.colorPickerPalette.image];
+}
+
 @end

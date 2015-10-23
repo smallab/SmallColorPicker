@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface USImageColorPicking : NSObject
 
 + (UIColor*)getPixelColorAtLocation:(CGPoint)point inImage:(CGImageRef)imgRef;
 + (CGContextRef)createARGBBitmapContextFromImage:(CGImageRef)imgRef;
++ (CGPoint)getPositionForColor:(NSString *)colorhex inImage:(UIImage *)image;
++ (BOOL)color:(UIColor *)color1 isEqualToColor:(UIColor *)color2 withTolerance:(CGFloat)tolerance;
 
 @end

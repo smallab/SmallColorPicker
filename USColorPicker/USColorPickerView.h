@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol USColorPickerViewDelegate <NSObject>
 
@@ -25,5 +26,6 @@
 
 - (void)applyPositionAndColor;
 - (void)applyPosition:(CGPoint)position andColor:(UIColor*)color;
+- (void)findPositionForColor:(NSString *)colorhex;
 
 @end

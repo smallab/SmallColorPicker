@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "USColorPickerView.h"
 
 @protocol USColorPickerControllerDelegate <NSObject>

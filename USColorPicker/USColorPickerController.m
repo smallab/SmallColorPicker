@@ -34,8 +34,8 @@
     unsigned int h = [[UIScreen mainScreen] bounds].size.height; // self.view.frame.size.height;
     unsigned int w = [[UIScreen mainScreen] bounds].size.width; // self.view.frame.size.width; //320;
     unsigned int m = (int) (0.06875 * w); // = 22;
-    if (h > 568)
-        h = 568;
+    /*if (h > 568)
+        h = 568;*/
     
     // self view
     self.view.frame = CGRectMake(0, 0, w, h);

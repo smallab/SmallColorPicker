@@ -1,6 +1,6 @@
 # USColorPicker
 
- Looking for this in *Swift*? It's [there](https://github.com/userstudio/USColorPickerSwift).
+ Looking for this in **Swift 2.0**? It's [there](https://github.com/userstudio/USColorPickerSwift).
 
 Here under is some sample code for the *View Controller* you wish to launch the **USColorPicker modal view** from:
 

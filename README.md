@@ -1,4 +1,4 @@
-# SmallaColorPicker
+# SmallColorPicker in Obj-C
 
  Looking for this in **Swift 2.0**? It's [there](https://github.com/smallab/SmallColorPickerSwift).
 
